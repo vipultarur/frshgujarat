@@ -1,3 +1,3 @@
 echo "BUILD START"
-python manage.py collectstatic --noinput --clear
+python manage.py collectstatic
 echo "BUILD END" 
