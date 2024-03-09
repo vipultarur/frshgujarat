@@ -2,6 +2,7 @@
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -16,7 +17,7 @@ SECRET_KEY = 'n+qfzy!zoth6))00$8mn^yrly+7rfq0wygs1kpn7$xh87*as97'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh','127.0.0.1','localhost']
+ALLOWED_HOSTS = []
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -68,11 +69,14 @@ WSGI_APPLICATION = 'QuizApp.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+ 'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'freshgujarat',
+        'USER': 'freshgujarat_user',
+        'PASSWORD': 'rJR53qpb6UMHjRbUfmdNRnVpkiBwq75r',
+        'HOST': 'dpg-cnm4lmn109ks73b8jcg0-a.oregon-postgres.render.com',
+        'PORT': '5432',
+    }}
 
 
 # Password validation

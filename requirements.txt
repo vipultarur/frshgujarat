@@ -1,0 +1,1 @@
+django-databse-url==1.0.3
