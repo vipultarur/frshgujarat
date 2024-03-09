@@ -1,13 +1,17 @@
 {
-    "builds": [{
+    "version": 2,
+    "functions": [
+      {
         "src": "QuizApp/wsgi.py",
         "use": "@ardnt/vercel-python-wsgi",
         "config": { "maxLambdaSize": "15mb" }
-    }],
+      }
+    ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "QuizApp/wsgi.py"
-        }
+      {
+        "src": "/(.*)",
+        "dest": "QuizApp/wsgi.py"
+      }
     ]
-}
+  }
+  
