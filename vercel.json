@@ -4,7 +4,7 @@
       { "src": "build", "use": "@QuizApp/python" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/manage.py" }
+      { "src": "/static/(.*)", "dest": "/static/" }
     ]
   }
   
