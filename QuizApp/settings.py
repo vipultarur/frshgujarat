@@ -2,7 +2,6 @@
 
 from pathlib import Path
 import os
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,14 +23,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.staticfiles'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'home.apps.HomeConfig',
     'main',
+
 ]
 
 MIDDLEWARE = [
@@ -69,14 +69,11 @@ WSGI_APPLICATION = 'QuizApp.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
- 'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'freshgujarat',
-        'USER': 'freshgujarat_user',
-        'PASSWORD': 'rJR53qpb6UMHjRbUfmdNRnVpkiBwq75r',
-        'HOST': 'dpg-cnm4lmn109ks73b8jcg0-a.oregon-postgres.render.com',
-        'PORT': '5432',
-    }}
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation
