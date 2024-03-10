@@ -1,4 +1,1 @@
 django==3.2.12
-package1==1.0  # Compatible with Python 3.7+
-package2>=2.0,<3.0  # Compatible with Python 3.7+
-package3<4.0  # Compatible with Python 3.7+
